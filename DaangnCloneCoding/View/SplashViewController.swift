@@ -16,15 +16,19 @@ class SplashViewController: UIViewController {
     }
     
     func setupView() {
+        print("here")
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
             timer.invalidate()
             
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "PlaceSettingViewController")
-            viewController.modalPresentationStyle = .fullScreen
-            
-            UIApplication.shared.keyWindow?.rootViewController = viewController
-            
+            DispatchQueue.main.async {
+//                self.appDelegate.switchMain()
+                
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = mainStoryboard.instantiateViewController(withIdentifier: "intro")
+                viewController.modalPresentationStyle = .fullScreen
+                
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+            }
             
         }
         

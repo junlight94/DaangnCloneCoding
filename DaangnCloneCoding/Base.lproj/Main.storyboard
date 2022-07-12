@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DaangnCloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="DaangnCloneCoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,74 +37,106 @@
             </objects>
             <point key="canvasLocation" x="-606" y="74"/>
         </scene>
-        <!--Place Setting View Controller-->
-        <scene sceneID="HON-Nd-ODj">
+        <!--Place Intro View Controller-->
+        <scene sceneID="5cu-A4-DoJ">
             <objects>
-                <viewController id="UY8-8o-NaM" customClass="PlaceSettingViewController" customModule="DaangnCloneCoding" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="k3l-Ag-OcD">
+                <viewController id="IKf-Da-Y0Q" customClass="PlaceIntroViewController" customModule="DaangnCloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zO9-Fg-Ql7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당근마켓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3T-lh-icf">
-                                <rect key="frame" x="101" y="84" width="173" height="60"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
-                                <color key="textColor" name="MainColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우리 동네 직거래 당근마켓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7a-22-py5">
-                                <rect key="frame" x="18" y="592.33333333333337" width="339" height="27.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우리 동네 직거래 당근마켓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsx-ln-Gx1">
+                                <rect key="frame" x="70.666666666666686" y="602.33333333333337" width="234" height="27.333333333333371"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1Q-gm-JhG" customClass="Button_General" customModule="DaangnCloneCoding" customModuleProvider="target">
-                                <rect key="frame" x="18" y="688" width="339" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUm-HL-nOz" customClass="Button_General" customModule="DaangnCloneCoding" customModuleProvider="target">
+                                <rect key="frame" x="18" y="698" width="339" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="JMJ-P7-U10"/>
+                                    <constraint firstAttribute="height" constant="50" id="O1c-NV-kfn"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="내 동네 설정하고 시작하기"/>
+                                <connections>
+                                    <action selector="startPressed:" destination="IKf-Da-Y0Q" eventType="touchUpInside" id="O5j-3V-Gl5"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="record.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wUE-Rb-bDP">
-                                <rect key="frame" x="122" y="245" width="131" height="161"/>
-                                <color key="tintColor" name="MainColor"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y20-js-ZLS">
-                                <rect key="frame" x="18" y="629.66666666666663" width="339" height="38.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbF-aY-C8r">
+                                <rect key="frame" x="75.333333333333329" y="639.66666666666663" width="224.66666666666669" height="38.333333333333371"/>
                                 <string key="text">당근마켓은 동네 직거래 마켓이에요.
 내 동네를 성정하고 시작해보세요!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당근마켓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSA-Jf-OOt">
+                                <rect key="frame" x="101" y="118" width="173" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="uo6-rd-zRX"/>
+                        <viewLayoutGuide key="safeArea" id="zFZ-gU-HKO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uo6-rd-zRX" firstAttribute="trailing" secondItem="y20-js-ZLS" secondAttribute="trailing" constant="18" id="2Nz-W7-oV3"/>
-                            <constraint firstItem="y20-js-ZLS" firstAttribute="top" secondItem="w7a-22-py5" secondAttribute="bottom" constant="10" id="41f-7K-e2W"/>
-                            <constraint firstItem="wUE-Rb-bDP" firstAttribute="width" secondItem="k3l-Ag-OcD" secondAttribute="width" multiplier="350:1000" id="70P-v6-w7v"/>
-                            <constraint firstItem="wUE-Rb-bDP" firstAttribute="centerX" secondItem="k3l-Ag-OcD" secondAttribute="centerX" id="8yC-Qp-98x"/>
-                            <constraint firstItem="h3T-lh-icf" firstAttribute="centerX" secondItem="k3l-Ag-OcD" secondAttribute="centerX" id="J82-c1-jit"/>
-                            <constraint firstItem="w7a-22-py5" firstAttribute="leading" secondItem="uo6-rd-zRX" secondAttribute="leading" constant="18" id="KVh-ON-u2c"/>
-                            <constraint firstItem="e1Q-gm-JhG" firstAttribute="top" secondItem="y20-js-ZLS" secondAttribute="bottom" constant="20" id="Ver-z1-zYT"/>
-                            <constraint firstItem="e1Q-gm-JhG" firstAttribute="leading" secondItem="uo6-rd-zRX" secondAttribute="leading" constant="18" id="XaD-3W-gYh"/>
-                            <constraint firstItem="h3T-lh-icf" firstAttribute="top" secondItem="uo6-rd-zRX" secondAttribute="top" constant="40" id="ZFa-e6-k4a"/>
-                            <constraint firstItem="uo6-rd-zRX" firstAttribute="trailing" secondItem="w7a-22-py5" secondAttribute="trailing" constant="18" id="cy0-xw-NJu"/>
-                            <constraint firstItem="y20-js-ZLS" firstAttribute="leading" secondItem="uo6-rd-zRX" secondAttribute="leading" constant="18" id="gNQ-in-XYD"/>
-                            <constraint firstItem="wUE-Rb-bDP" firstAttribute="top" secondItem="h3T-lh-icf" secondAttribute="bottom" constant="100" id="lbC-89-3ve"/>
-                            <constraint firstItem="y20-js-ZLS" firstAttribute="centerX" secondItem="k3l-Ag-OcD" secondAttribute="centerX" id="v8w-iL-nip"/>
-                            <constraint firstItem="wUE-Rb-bDP" firstAttribute="height" secondItem="k3l-Ag-OcD" secondAttribute="height" multiplier="200:1000" id="vDi-jD-HUj"/>
-                            <constraint firstItem="uo6-rd-zRX" firstAttribute="bottom" secondItem="e1Q-gm-JhG" secondAttribute="bottom" constant="40" id="xUv-n8-W9j"/>
-                            <constraint firstItem="uo6-rd-zRX" firstAttribute="trailing" secondItem="e1Q-gm-JhG" secondAttribute="trailing" constant="18" id="zer-EH-b8i"/>
+                            <constraint firstItem="HbF-aY-C8r" firstAttribute="centerX" secondItem="zO9-Fg-Ql7" secondAttribute="centerX" id="1bo-ZU-FV6"/>
+                            <constraint firstItem="HbF-aY-C8r" firstAttribute="top" secondItem="Dsx-ln-Gx1" secondAttribute="bottom" constant="10" id="2M9-ou-txg"/>
+                            <constraint firstItem="zFZ-gU-HKO" firstAttribute="trailing" secondItem="xUm-HL-nOz" secondAttribute="trailing" constant="18" id="Q1F-ZE-1U3"/>
+                            <constraint firstItem="xUm-HL-nOz" firstAttribute="leading" secondItem="zO9-Fg-Ql7" secondAttribute="leading" constant="18" id="UCJ-Jw-1JI"/>
+                            <constraint firstItem="xUm-HL-nOz" firstAttribute="top" secondItem="HbF-aY-C8r" secondAttribute="bottom" constant="20" id="UGz-fl-q6K"/>
+                            <constraint firstItem="zFZ-gU-HKO" firstAttribute="bottom" secondItem="xUm-HL-nOz" secondAttribute="bottom" constant="30" id="hDo-rr-Skc"/>
+                            <constraint firstItem="NSA-Jf-OOt" firstAttribute="top" secondItem="zFZ-gU-HKO" secondAttribute="top" constant="30" id="nqd-hI-Mj5"/>
+                            <constraint firstItem="NSA-Jf-OOt" firstAttribute="centerX" secondItem="zO9-Fg-Ql7" secondAttribute="centerX" id="obo-dT-aJE"/>
+                            <constraint firstItem="Dsx-ln-Gx1" firstAttribute="centerX" secondItem="zO9-Fg-Ql7" secondAttribute="centerX" id="xwX-R7-jHd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hGS-Fy-era"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zh8-aO-B6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="03Z-ke-e4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.78260869565219" y="73.660714285714278"/>
+            <point key="canvasLocation" x="104.8" y="87.931034482758619"/>
+        </scene>
+        <!--My Town View Controller-->
+        <scene sceneID="Mcc-qy-tgm">
+            <objects>
+                <viewController storyboardIdentifier="myTownView" id="Nst-ci-J3A" customClass="MyTownViewController" customModule="DaangnCloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Mc-pZ-fxh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS8-Ap-dhS">
+                                <rect key="frame" x="52" y="72" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="arrow.backward.circle" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I4W-n3-tJr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c7A-If-aFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="81"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xay-9a-gMU">
+            <objects>
+                <navigationController storyboardIdentifier="intro" id="19d-2n-uRR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="glw-tt-nJA">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IKf-Da-Y0Q" kind="relationship" relationship="rootViewController" id="26x-cr-MFw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pqd-fX-Mtp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105" y="-641"/>
         </scene>
     </scenes>
     <resources>
-        <image name="record.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
         <namedColor name="MainColor">
             <color red="0.90196078431372551" green="0.49803921568627452" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

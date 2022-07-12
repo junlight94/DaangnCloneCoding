@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9337DF3F287DA1E10056B388 /* PlaceSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337DF3E287DA1E10056B388 /* PlaceSettingViewController.swift */; };
 		9337DF41287DA2CC0056B388 /* Button+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337DF40287DA2CC0056B388 /* Button+General.swift */; };
+		936291BB287DBB170019E181 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936291BA287DBB170019E181 /* MyTownViewController.swift */; };
 		938D5FAA2871CDB4004FC877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D5FA92871CDB4004FC877 /* AppDelegate.swift */; };
 		938D5FAE2871CDB4004FC877 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D5FAD2871CDB4004FC877 /* ViewController.swift */; };
 		938D5FB12871CDB4004FC877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938D5FAF2871CDB4004FC877 /* Main.storyboard */; };
 		938D5FB32871CDB6004FC877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938D5FB22871CDB6004FC877 /* Assets.xcassets */; };
 		938D5FB62871CDB6004FC877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938D5FB42871CDB6004FC877 /* LaunchScreen.storyboard */; };
 		93B5C960287D9C7D009F5EA4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5C95F287D9C7D009F5EA4 /* SplashViewController.swift */; };
+		93C4F228287DB88D00E0725A /* PlaceIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4F227287DB88D00E0725A /* PlaceIntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9337DF3E287DA1E10056B388 /* PlaceSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSettingViewController.swift; sourceTree = "<group>"; };
 		9337DF40287DA2CC0056B388 /* Button+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+General.swift"; sourceTree = "<group>"; };
+		936291BA287DBB170019E181 /* MyTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownViewController.swift; sourceTree = "<group>"; };
 		938D5FA62871CDB4004FC877 /* DaangnCloneCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaangnCloneCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		938D5FA92871CDB4004FC877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		938D5FAD2871CDB4004FC877 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 		938D5FB52871CDB6004FC877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		938D5FB72871CDB6004FC877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93B5C95F287D9C7D009F5EA4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		93C4F227287DB88D00E0725A /* PlaceIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceIntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,14 +43,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9337DF3D287DA1800056B388 /* 시작-온보딩 */ = {
-			isa = PBXGroup;
-			children = (
-				9337DF3E287DA1E10056B388 /* PlaceSettingViewController.swift */,
-			);
-			name = "시작-온보딩";
-			sourceTree = "<group>";
-		};
 		938D5F9D2871CDB4004FC877 = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +94,6 @@
 			children = (
 				93B5C95B287D9C2D009F5EA4 /* _common */,
 				93B5C95C287D9C48009F5EA4 /* 시작-인트로 */,
-				9337DF3D287DA1800056B388 /* 시작-온보딩 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				93B5C95F287D9C7D009F5EA4 /* SplashViewController.swift */,
+				93C4F227287DB88D00E0725A /* PlaceIntroViewController.swift */,
+				936291BA287DBB170019E181 /* MyTownViewController.swift */,
 			);
 			name = "시작-인트로";
 			sourceTree = "<group>";
@@ -194,9 +189,10 @@
 			files = (
 				93B5C960287D9C7D009F5EA4 /* SplashViewController.swift in Sources */,
 				9337DF41287DA2CC0056B388 /* Button+General.swift in Sources */,
+				936291BB287DBB170019E181 /* MyTownViewController.swift in Sources */,
 				938D5FAE2871CDB4004FC877 /* ViewController.swift in Sources */,
-				9337DF3F287DA1E10056B388 /* PlaceSettingViewController.swift in Sources */,
 				938D5FAA2871CDB4004FC877 /* AppDelegate.swift in Sources */,
+				93C4F228287DB88D00E0725A /* PlaceIntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

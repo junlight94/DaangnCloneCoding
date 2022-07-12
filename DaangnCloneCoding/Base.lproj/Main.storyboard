@@ -1,24 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DaangnCloneCoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당근마켓 클론코딩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYJ-Rz-cda">
+                                <rect key="frame" x="116" y="394" width="143" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RYJ-Rz-cda" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="538-LP-zYe"/>
+                            <constraint firstItem="RYJ-Rz-cda" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a35-40-Mqc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-606" y="74"/>
+        </scene>
+        <!--Place Setting View Controller-->
+        <scene sceneID="HON-Nd-ODj">
+            <objects>
+                <viewController id="UY8-8o-NaM" customClass="PlaceSettingViewController" customModule="DaangnCloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k3l-Ag-OcD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당근마켓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3T-lh-icf">
+                                <rect key="frame" x="101" y="84" width="173" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우리 동네 직거래 당근마켓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7a-22-py5">
+                                <rect key="frame" x="18" y="592.33333333333337" width="339" height="27.333333333333371"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1Q-gm-JhG" customClass="Button_General" customModule="DaangnCloneCoding" customModuleProvider="target">
+                                <rect key="frame" x="18" y="688" width="339" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JMJ-P7-U10"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="내 동네 설정하고 시작하기"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="record.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wUE-Rb-bDP">
+                                <rect key="frame" x="122" y="245" width="131" height="161"/>
+                                <color key="tintColor" name="MainColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y20-js-ZLS">
+                                <rect key="frame" x="18" y="629.66666666666663" width="339" height="38.333333333333371"/>
+                                <string key="text">당근마켓은 동네 직거래 마켓이에요.
+내 동네를 성정하고 시작해보세요!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uo6-rd-zRX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uo6-rd-zRX" firstAttribute="trailing" secondItem="y20-js-ZLS" secondAttribute="trailing" constant="18" id="2Nz-W7-oV3"/>
+                            <constraint firstItem="y20-js-ZLS" firstAttribute="top" secondItem="w7a-22-py5" secondAttribute="bottom" constant="10" id="41f-7K-e2W"/>
+                            <constraint firstItem="wUE-Rb-bDP" firstAttribute="width" secondItem="k3l-Ag-OcD" secondAttribute="width" multiplier="350:1000" id="70P-v6-w7v"/>
+                            <constraint firstItem="wUE-Rb-bDP" firstAttribute="centerX" secondItem="k3l-Ag-OcD" secondAttribute="centerX" id="8yC-Qp-98x"/>
+                            <constraint firstItem="h3T-lh-icf" firstAttribute="centerX" secondItem="k3l-Ag-OcD" secondAttribute="centerX" id="J82-c1-jit"/>
+                            <constraint firstItem="w7a-22-py5" firstAttribute="leading" secondItem="uo6-rd-zRX" secondAttribute="leading" constant="18" id="KVh-ON-u2c"/>
+                            <constraint firstItem="e1Q-gm-JhG" firstAttribute="top" secondItem="y20-js-ZLS" secondAttribute="bottom" constant="20" id="Ver-z1-zYT"/>
+                            <constraint firstItem="e1Q-gm-JhG" firstAttribute="leading" secondItem="uo6-rd-zRX" secondAttribute="leading" constant="18" id="XaD-3W-gYh"/>
+                            <constraint firstItem="h3T-lh-icf" firstAttribute="top" secondItem="uo6-rd-zRX" secondAttribute="top" constant="40" id="ZFa-e6-k4a"/>
+                            <constraint firstItem="uo6-rd-zRX" firstAttribute="trailing" secondItem="w7a-22-py5" secondAttribute="trailing" constant="18" id="cy0-xw-NJu"/>
+                            <constraint firstItem="y20-js-ZLS" firstAttribute="leading" secondItem="uo6-rd-zRX" secondAttribute="leading" constant="18" id="gNQ-in-XYD"/>
+                            <constraint firstItem="wUE-Rb-bDP" firstAttribute="top" secondItem="h3T-lh-icf" secondAttribute="bottom" constant="100" id="lbC-89-3ve"/>
+                            <constraint firstItem="y20-js-ZLS" firstAttribute="centerX" secondItem="k3l-Ag-OcD" secondAttribute="centerX" id="v8w-iL-nip"/>
+                            <constraint firstItem="wUE-Rb-bDP" firstAttribute="height" secondItem="k3l-Ag-OcD" secondAttribute="height" multiplier="200:1000" id="vDi-jD-HUj"/>
+                            <constraint firstItem="uo6-rd-zRX" firstAttribute="bottom" secondItem="e1Q-gm-JhG" secondAttribute="bottom" constant="40" id="xUv-n8-W9j"/>
+                            <constraint firstItem="uo6-rd-zRX" firstAttribute="trailing" secondItem="e1Q-gm-JhG" secondAttribute="trailing" constant="18" id="zer-EH-b8i"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zh8-aO-B6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="73.660714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="record.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="MainColor">
+            <color red="0.90196078431372551" green="0.49803921568627452" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

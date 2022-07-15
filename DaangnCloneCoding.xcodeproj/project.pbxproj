@@ -14,11 +14,18 @@
 		938D5FB12871CDB4004FC877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938D5FAF2871CDB4004FC877 /* Main.storyboard */; };
 		938D5FB32871CDB6004FC877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938D5FB22871CDB6004FC877 /* Assets.xcassets */; };
 		938D5FB62871CDB6004FC877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938D5FB42871CDB6004FC877 /* LaunchScreen.storyboard */; };
+		93A7A26928803C1000F6F162 /* MyTownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A7A26728803C1000F6F162 /* MyTownTableViewCell.swift */; };
+		93A7A26A28803C1000F6F162 /* MyTownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A7A26828803C1000F6F162 /* MyTownTableViewCell.xib */; };
+		93A7A26C2880403F00F6F162 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A7A26B2880403F00F6F162 /* Delegate.swift */; };
 		93B5C960287D9C7D009F5EA4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5C95F287D9C7D009F5EA4 /* SplashViewController.swift */; };
+		93BDC0A2287EEDD7001ED626 /* TextField+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDC0A1287EEDD7001ED626 /* TextField+Search.swift */; };
 		93C4F228287DB88D00E0725A /* PlaceIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4F227287DB88D00E0725A /* PlaceIntroViewController.swift */; };
+		D8DA7A2179942C71FB581132 /* libPods-DaangnCloneCoding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A328090ACB78FC4396451E /* libPods-DaangnCloneCoding.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D535CDED6264599E3DCBCB9 /* Pods-DaangnCloneCoding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnCloneCoding.debug.xcconfig"; path = "Target Support Files/Pods-DaangnCloneCoding/Pods-DaangnCloneCoding.debug.xcconfig"; sourceTree = "<group>"; };
+		5695783D8B7FE016BC2B55F9 /* Pods-DaangnCloneCoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnCloneCoding.release.xcconfig"; path = "Target Support Files/Pods-DaangnCloneCoding/Pods-DaangnCloneCoding.release.xcconfig"; sourceTree = "<group>"; };
 		9337DF40287DA2CC0056B388 /* Button+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+General.swift"; sourceTree = "<group>"; };
 		936291BA287DBB170019E181 /* MyTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownViewController.swift; sourceTree = "<group>"; };
 		938D5FA62871CDB4004FC877 /* DaangnCloneCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaangnCloneCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,8 +35,13 @@
 		938D5FB22871CDB6004FC877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		938D5FB52871CDB6004FC877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		938D5FB72871CDB6004FC877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A7A26728803C1000F6F162 /* MyTownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownTableViewCell.swift; sourceTree = "<group>"; };
+		93A7A26828803C1000F6F162 /* MyTownTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTownTableViewCell.xib; sourceTree = "<group>"; };
+		93A7A26B2880403F00F6F162 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		93B5C95F287D9C7D009F5EA4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		93BDC0A1287EEDD7001ED626 /* TextField+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Search.swift"; sourceTree = "<group>"; };
 		93C4F227287DB88D00E0725A /* PlaceIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceIntroViewController.swift; sourceTree = "<group>"; };
+		F7A328090ACB78FC4396451E /* libPods-DaangnCloneCoding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DaangnCloneCoding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8DA7A2179942C71FB581132 /* libPods-DaangnCloneCoding.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		760E370BF33F93E6BDDCE40D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7A328090ACB78FC4396451E /* libPods-DaangnCloneCoding.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A889215F15419ACEC0C60C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D535CDED6264599E3DCBCB9 /* Pods-DaangnCloneCoding.debug.xcconfig */,
+				5695783D8B7FE016BC2B55F9 /* Pods-DaangnCloneCoding.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		938D5F9D2871CDB4004FC877 = {
 			isa = PBXGroup;
 			children = (
 				938D5FA82871CDB4004FC877 /* DaangnCloneCoding */,
 				938D5FA72871CDB4004FC877 /* Products */,
+				7A889215F15419ACEC0C60C3 /* Pods */,
+				760E370BF33F93E6BDDCE40D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +117,7 @@
 		93B5C959287D9C08009F5EA4 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				93A7A26B2880403F00F6F162 /* Delegate.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -102,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				9337DF40287DA2CC0056B388 /* Button+General.swift */,
+				93BDC0A1287EEDD7001ED626 /* TextField+Search.swift */,
 			);
 			path = _common;
 			sourceTree = "<group>";
@@ -112,6 +146,8 @@
 				93B5C95F287D9C7D009F5EA4 /* SplashViewController.swift */,
 				93C4F227287DB88D00E0725A /* PlaceIntroViewController.swift */,
 				936291BA287DBB170019E181 /* MyTownViewController.swift */,
+				93A7A26728803C1000F6F162 /* MyTownTableViewCell.swift */,
+				93A7A26828803C1000F6F162 /* MyTownTableViewCell.xib */,
 			);
 			name = "시작-인트로";
 			sourceTree = "<group>";
@@ -123,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 938D5FBA2871CDB6004FC877 /* Build configuration list for PBXNativeTarget "DaangnCloneCoding" */;
 			buildPhases = (
+				BA8AB8667FAA17CBB5F6BBB0 /* [CP] Check Pods Manifest.lock */,
 				938D5FA22871CDB4004FC877 /* Sources */,
 				938D5FA32871CDB4004FC877 /* Frameworks */,
 				938D5FA42871CDB4004FC877 /* Resources */,
@@ -175,12 +212,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				938D5FB62871CDB6004FC877 /* LaunchScreen.storyboard in Resources */,
+				93A7A26A28803C1000F6F162 /* MyTownTableViewCell.xib in Resources */,
 				938D5FB32871CDB6004FC877 /* Assets.xcassets in Resources */,
 				938D5FB12871CDB4004FC877 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA8AB8667FAA17CBB5F6BBB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DaangnCloneCoding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		938D5FA22871CDB4004FC877 /* Sources */ = {
@@ -190,8 +253,11 @@
 				93B5C960287D9C7D009F5EA4 /* SplashViewController.swift in Sources */,
 				9337DF41287DA2CC0056B388 /* Button+General.swift in Sources */,
 				936291BB287DBB170019E181 /* MyTownViewController.swift in Sources */,
+				93A7A26C2880403F00F6F162 /* Delegate.swift in Sources */,
 				938D5FAE2871CDB4004FC877 /* ViewController.swift in Sources */,
 				938D5FAA2871CDB4004FC877 /* AppDelegate.swift in Sources */,
+				93A7A26928803C1000F6F162 /* MyTownTableViewCell.swift in Sources */,
+				93BDC0A2287EEDD7001ED626 /* TextField+Search.swift in Sources */,
 				93C4F228287DB88D00E0725A /* PlaceIntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +400,7 @@
 		};
 		938D5FBB2871CDB6004FC877 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D535CDED6264599E3DCBCB9 /* Pods-DaangnCloneCoding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -363,6 +430,7 @@
 		};
 		938D5FBC2871CDB6004FC877 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5695783D8B7FE016BC2B55F9 /* Pods-DaangnCloneCoding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

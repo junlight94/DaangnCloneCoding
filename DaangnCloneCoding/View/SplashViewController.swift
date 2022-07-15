@@ -9,6 +9,8 @@ import UIKit
 
 class SplashViewController: UIViewController {
     
+    var check = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,25 +18,26 @@ class SplashViewController: UIViewController {
     }
     
     func setupView() {
-        print("here")
+        print("Splash 분기")
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
             timer.invalidate()
-            
             DispatchQueue.main.async {
-//                self.appDelegate.switchMain()
-                
-                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let viewController = mainStoryboard.instantiateViewController(withIdentifier: "intro")
-                viewController.modalPresentationStyle = .fullScreen
-                
-                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.checkJoin()
             }
-            
         }
-        
     }
     // MARK: - General function
-
+    func checkJoin() {
+        if check == true {
+            self.appDelegate.switchMain()
+        } else {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "intro")
+            viewController.modalPresentationStyle = .fullScreen
+            
+            UIApplication.shared.keyWindow?.rootViewController = viewController
+        }
+    }
     // MARK: - IBAction function
 
     // MARK: - Selector function

@@ -38,8 +38,8 @@ class MyTownViewController: UIViewController, PopupButtonDelegate, TextSearchDel
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var noDataView: UIView!
-    @IBOutlet var textField: TextField_Search!
     @IBOutlet var outView: UIView!
+    @IBOutlet weak var textField: TextField_Search!
     
     //DummyData
     var viewData = [String]()
@@ -54,7 +54,6 @@ class MyTownViewController: UIViewController, PopupButtonDelegate, TextSearchDel
     // MARK: - General function
     func setupView() {
         textField.searchDelegate = self
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none

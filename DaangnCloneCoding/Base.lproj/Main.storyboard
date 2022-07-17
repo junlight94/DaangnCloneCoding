@@ -114,9 +114,6 @@
                                         <rect key="frame" x="72" y="9" width="273" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textField:" destination="Nst-ci-J3A" eventType="editingDidEnd" id="bKz-FH-7jB"/>
-                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa4-ga-2Wf">
                                         <rect key="frame" x="18" y="14" width="24" height="24"/>
@@ -214,7 +211,7 @@
                         <outlet property="noDataView" destination="Qe3-07-rgi" id="2wV-RF-Vze"/>
                         <outlet property="outView" destination="AdD-nT-ALY" id="Uj4-A4-X4h"/>
                         <outlet property="tableView" destination="b8e-HP-nSB" id="9XL-45-1iV"/>
-                        <outlet property="textField" destination="CrN-GH-Zay" id="d6S-Il-mFx"/>
+                        <outlet property="textField" destination="CrN-GH-Zay" id="DEQ-3b-eLX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7A-If-aFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

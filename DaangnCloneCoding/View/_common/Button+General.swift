@@ -26,13 +26,16 @@ class Button_General: UIButton {
             if isHighlighted {
                 self.backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.9)
             } else {
-                
-                if isEnabled {
-                    self.backgroundColor = UIColor(named: "MainColor")
-                } else {
-                    self.backgroundColor = UIColor(named: "227,223,227")
-                }
-                
+                self.backgroundColor = UIColor(named: "MainColor")
+            }
+        }
+    }
+    override var isEnabled: Bool {
+        didSet {
+            if isEnabled {
+                self.backgroundColor = UIColor(named: "MainColor")
+            } else {
+                self.backgroundColor = UIColor(named: "227,223,227")
             }
         }
     }

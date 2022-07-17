@@ -45,6 +45,17 @@ class TextField_Search: UITextField, UITextFieldDelegate {
         return bounds.inset(by: padding)
     }
     
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if let text = textField.text{
+            searchDelegate?.textFieldChange(text: text)
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     private func setupView() {
         delegate = self
         
@@ -70,6 +81,9 @@ class TextField_Search: UITextField, UITextFieldDelegate {
             // Fallback on earlier versions
         }
 
+        ivSearch.tintColor = UIColor.black
+        btnClose.tintColor = UIColor.black
+        
         addSubview(btnClose)
         addSubview(ivSearch)
         
@@ -85,17 +99,6 @@ class TextField_Search: UITextField, UITextFieldDelegate {
         
         btnClose.addTarget(self, action: #selector(OnClickClose), for: .touchUpInside)
         
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        if let text = textField.text{
-            searchDelegate?.textFieldChange(text: text)
-        }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
     
     @objc func OnClickClose() {

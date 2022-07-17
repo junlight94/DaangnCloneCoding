@@ -7,7 +7,20 @@
 
 import UIKit
 
-class MyTownViewController: UIViewController, TextSearchDelegate, UITextFieldDelegate {
+class MyTownViewController: UIViewController, PopupButtonDelegate, TextSearchDelegate {
+    func buttonPressed(popupId: Int?, isOk: Bool) {
+        if isOk {
+            self.dismiss(animated: false){
+                print("okButtonClick")
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = mainStoryboard.instantiateViewController(withIdentifier: "joinView")
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        } else {
+            self.dismiss(animated: false)
+        }
+    }
+    
     func textFieldChange(text: String) {
         if text.count > 0 {
             print(myTownData.filter({$0.contains(text)}))
@@ -22,11 +35,11 @@ class MyTownViewController: UIViewController, TextSearchDelegate, UITextFieldDel
         }
         tableView.reloadData()
     }
-    
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var noDataView: UIView!
     @IBOutlet var textField: TextField_Search!
+    @IBOutlet var outView: UIView!
     
     //DummyData
     var viewData = [String]()
@@ -40,11 +53,16 @@ class MyTownViewController: UIViewController, TextSearchDelegate, UITextFieldDel
     
     // MARK: - General function
     func setupView() {
+        textField.searchDelegate = self
+        
         tableView.delegate = self
         tableView.dataSource = self
-        textField.searchDelegate = self
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: "MyTownTableViewCell", bundle: nil), forCellReuseIdentifier: "MyTownTableViewCell")
+        
+        let outTap = UITapGestureRecognizer(target: self, action: #selector(keyDown))
+        outTap.cancelsTouchesInView = false
+        outView.addGestureRecognizer(outTap)
     }
     
 
@@ -58,9 +76,17 @@ class MyTownViewController: UIViewController, TextSearchDelegate, UITextFieldDel
     // MARK: - Selector function
     @objc func btnOnClick(_ sender: UIButton) {
         print(viewData[sender.tag])
-        
+        let vc = PopupViewController(nibName: "PopupViewController", bundle: nil)
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.isOneButton = false
+        vc.delegate = self
+        vc.textContent = "선택한 동네가 \(viewData[sender.tag])이 맞습니까?"
+        self.present(vc, animated: false)
     }
     
+    @objc func keyDown(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
 }
 // MARK: - Extension
 extension MyTownViewController: UITableViewDelegate, UITableViewDataSource {

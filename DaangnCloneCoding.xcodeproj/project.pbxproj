@@ -60,6 +60,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08887F282883E6A300F87400 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		760E370BF33F93E6BDDCE40D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +105,7 @@
 		938D5FA82871CDB4004FC877 /* DaangnCloneCoding */ = {
 			isa = PBXGroup;
 			children = (
-				93B5C958287D9BFC009F5EA4 /* Model */,
+				08887F282883E6A300F87400 /* Model */,
 				93B5C959287D9C08009F5EA4 /* Util */,
 				93B5C95A287D9C13009F5EA4 /* View */,
 				938D5FA92871CDB4004FC877 /* AppDelegate.swift */,
@@ -109,13 +116,6 @@
 				938D5FB72871CDB6004FC877 /* Info.plist */,
 			);
 			path = DaangnCloneCoding;
-			sourceTree = "<group>";
-		};
-		93B5C958287D9BFC009F5EA4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		93B5C959287D9C08009F5EA4 /* Util */ = {

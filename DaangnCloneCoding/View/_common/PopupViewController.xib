@@ -12,6 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupViewController" customModule="DaangnCloneCoding" customModuleProvider="target">
             <connections>
+                <outlet property="lbTitle" destination="9wv-25-0Po" id="UKi-bO-Ida"/>
+                <outlet property="oneButton" destination="DST-2a-fey" id="77s-Va-zhW"/>
+                <outlet property="popupView" destination="Bmx-xm-xpy" id="tft-GO-0gB"/>
+                <outlet property="twoButton" destination="GLT-mN-Xz8" id="V0B-Vx-SZH"/>
+                <outlet property="twoButtonCancel" destination="y8m-Ij-s08" id="jz3-nd-cXJ"/>
+                <outlet property="twoButtonOk" destination="K89-6O-gDh" id="cD4-00-BMS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,9 +26,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNQ-0H-c1n">
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNQ-0H-c1n">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmx-xm-xpy">
                     <rect key="frame" x="20" y="378" width="374" height="140.5"/>
@@ -42,6 +48,9 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="확인"/>
+                            <connections>
+                                <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="Myy-QL-bBu"/>
+                            </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="GLT-mN-Xz8">
                             <rect key="frame" x="20" y="70.5" width="334" height="50"/>
@@ -55,6 +64,9 @@
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                                    <connections>
+                                        <action selector="cancelButtonPressed:" destination="-1" eventType="touchUpInside" id="h9c-AF-mtp"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K89-6O-gDh">
                                     <rect key="frame" x="182" y="0.0" width="152" height="50"/>
@@ -65,6 +77,9 @@
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="확인"/>
+                                    <connections>
+                                        <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="bbm-Zp-szr"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -89,7 +104,6 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Bmx-xm-xpy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2Kb-KV-mjI"/>
                 <constraint firstItem="Bmx-xm-xpy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="87J-au-Bjl"/>

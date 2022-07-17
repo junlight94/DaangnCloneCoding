@@ -8,22 +8,53 @@
 import UIKit
 
 class PopupViewController: UIViewController {
-
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var popupView: UIView!
+    
+    @IBOutlet weak var oneButton: UIButton!
+    
+    @IBOutlet weak var twoButton: UIStackView!
+    @IBOutlet weak var twoButtonOk: UIButton!
+    @IBOutlet weak var twoButtonCancel: UIButton!
+    
+    var delegate: PopupButtonDelegate?
+    
+    open var textContent: String?
+    open var popupId: Int?
+    open var isOneButton = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupView()
         // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupView() {
+        popupView.layer.cornerRadius = 8
+        oneButton.layer.cornerRadius = 8
+        twoButtonOk.layer.cornerRadius = 8
+        twoButtonCancel.layer.cornerRadius = 8
+        
+        lbTitle.text = textContent ?? ""
+        
+        if isOneButton {
+            twoButton.isHidden = true
+        } else {
+            oneButton.isHidden = true
+        }
+        
+        
     }
-    */
-
+    
+    @IBAction func okButtonPressed(_ sender: Any) {
+        self.dismiss(animated: false) {
+            self.delegate?.buttonPressed(popupId: self.popupId, isOk: true)
+        }
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.dismiss(animated: false) {
+            self.delegate?.buttonPressed(popupId: self.popupId, isOk: false)
+        }
+    }
 }

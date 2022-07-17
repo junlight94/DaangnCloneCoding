@@ -8,13 +8,18 @@
 import UIKit
 import SnapKit
 
+// TextField 글자 확인을 위한 딜리게이트
+protocol TextSearchDelegate {
+    func textFieldChange(text: String)
+}
+
 class TextField_Search: UITextField, UITextFieldDelegate {
     
     var searchDelegate: TextSearchDelegate?
     
     let ivSearch = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
     let btnClose = UIButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
-    let padding = UIEdgeInsets(top: 0, left: 32, bottom: 0, right: 18)
+    let padding = UIEdgeInsets(top: 0, left: 32, bottom: 0, right: 32)
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -41,10 +46,10 @@ class TextField_Search: UITextField, UITextFieldDelegate {
     }
     
     private func setupView() {
+        delegate = self
+        
         borderStyle = .none
         returnKeyType = .done
-        
-        delegate = self
         
         let border = CALayer()
         border.frame = CGRect(x: 0, y: frame.size.height-1, width: frame.width, height: 1)
@@ -64,7 +69,7 @@ class TextField_Search: UITextField, UITextFieldDelegate {
         } else {
             // Fallback on earlier versions
         }
-        
+
         addSubview(btnClose)
         addSubview(ivSearch)
         
@@ -73,6 +78,7 @@ class TextField_Search: UITextField, UITextFieldDelegate {
             make.centerY.equalToSuperview()
         }
         btnClose.snp.makeConstraints{ (make) in
+            make.width.height.equalTo(14)
             make.trailing.equalToSuperview().offset(-14)
             make.centerY.equalToSuperview()
         }
@@ -81,8 +87,10 @@ class TextField_Search: UITextField, UITextFieldDelegate {
         
     }
     
-    @objc func OnClickClose() {
-        text = ""
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if let text = textField.text{
+            searchDelegate?.textFieldChange(text: text)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -90,12 +98,7 @@ class TextField_Search: UITextField, UITextFieldDelegate {
         return true
     }
     
-}
-
-extension TextField_Search: UITextViewDelegate {
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        if let text = textField.text{
-            searchDelegate?.textFieldChange(text: text)
-        }
+    @objc func OnClickClose() {
+        text = ""
     }
 }

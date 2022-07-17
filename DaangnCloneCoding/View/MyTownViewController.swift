@@ -18,19 +18,15 @@ class MyTownViewController: UIViewController, TextSearchDelegate, UITextFieldDel
                 noDataView.isHidden = false
             }
         } else {
-            if viewData.count > 0 {
-                noDataView.isHidden = true
-            } else {
-                noDataView.isHidden = false
-            }
+            noDataView.isHidden = false
         }
         tableView.reloadData()
     }
     
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var noDataView: UIView!
-    @IBOutlet weak var textField: TextField_Search!
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var noDataView: UIView!
+    @IBOutlet var textField: TextField_Search!
     
     //DummyData
     var viewData = [String]()
@@ -62,6 +58,7 @@ class MyTownViewController: UIViewController, TextSearchDelegate, UITextFieldDel
     // MARK: - Selector function
     @objc func btnOnClick(_ sender: UIButton) {
         print(viewData[sender.tag])
+        
     }
     
 }

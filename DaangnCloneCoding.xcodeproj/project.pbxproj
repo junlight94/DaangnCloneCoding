@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08887F262883E53600F87400 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08887F242883E53600F87400 /* PopupViewController.swift */; };
+		08887F272883E53600F87400 /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08887F252883E53600F87400 /* PopupViewController.xib */; };
 		9337DF41287DA2CC0056B388 /* Button+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337DF40287DA2CC0056B388 /* Button+General.swift */; };
 		936291BB287DBB170019E181 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936291BA287DBB170019E181 /* MyTownViewController.swift */; };
 		938D5FAA2871CDB4004FC877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D5FA92871CDB4004FC877 /* AppDelegate.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08887F242883E53600F87400 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		08887F252883E53600F87400 /* PopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupViewController.xib; sourceTree = "<group>"; };
 		1D535CDED6264599E3DCBCB9 /* Pods-DaangnCloneCoding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnCloneCoding.debug.xcconfig"; path = "Target Support Files/Pods-DaangnCloneCoding/Pods-DaangnCloneCoding.debug.xcconfig"; sourceTree = "<group>"; };
 		5695783D8B7FE016BC2B55F9 /* Pods-DaangnCloneCoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnCloneCoding.release.xcconfig"; path = "Target Support Files/Pods-DaangnCloneCoding/Pods-DaangnCloneCoding.release.xcconfig"; sourceTree = "<group>"; };
 		9337DF40287DA2CC0056B388 /* Button+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+General.swift"; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 			children = (
 				9337DF40287DA2CC0056B388 /* Button+General.swift */,
 				93BDC0A1287EEDD7001ED626 /* TextField+Search.swift */,
+				08887F242883E53600F87400 /* PopupViewController.swift */,
+				08887F252883E53600F87400 /* PopupViewController.xib */,
 			);
 			path = _common;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 			files = (
 				938D5FB62871CDB6004FC877 /* LaunchScreen.storyboard in Resources */,
 				93A7A26A28803C1000F6F162 /* MyTownTableViewCell.xib in Resources */,
+				08887F272883E53600F87400 /* PopupViewController.xib in Resources */,
 				938D5FB32871CDB6004FC877 /* Assets.xcassets in Resources */,
 				938D5FB12871CDB4004FC877 /* Main.storyboard in Resources */,
 			);
@@ -255,6 +262,7 @@
 				936291BB287DBB170019E181 /* MyTownViewController.swift in Sources */,
 				93A7A26C2880403F00F6F162 /* Delegate.swift in Sources */,
 				938D5FAE2871CDB4004FC877 /* ViewController.swift in Sources */,
+				08887F262883E53600F87400 /* PopupViewController.swift in Sources */,
 				938D5FAA2871CDB4004FC877 /* AppDelegate.swift in Sources */,
 				93A7A26928803C1000F6F162 /* MyTownTableViewCell.swift in Sources */,
 				93BDC0A2287EEDD7001ED626 /* TextField+Search.swift in Sources */,

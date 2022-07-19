@@ -6,11 +6,9 @@
 //
 
 import UIKit
-import SnapKit
 
 
-
-class TextField_Search: UITextField, UITextFieldDelegate {
+class TextField_General: UITextField {
     
     var searchDelegate: TextSearchDelegate?
     
@@ -42,12 +40,6 @@ class TextField_Search: UITextField, UITextFieldDelegate {
         return bounds.inset(by: padding)
     }
     
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        if let text = textField.text{
-            searchDelegate?.textFieldChange(text: text)
-        }
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -59,46 +51,49 @@ class TextField_Search: UITextField, UITextFieldDelegate {
         borderStyle = .none
         returnKeyType = .done
         
-        let border = CALayer()
-        border.frame = CGRect(x: 0, y: frame.size.height-1, width: frame.width, height: 1)
-        border.backgroundColor = UIColor.black.withAlphaComponent(0.2).cgColor
-        layer.addSublayer(border)
-        
+        layer.borderWidth = 1
+        layer.cornerRadius = 8
+        layer.borderColor = UIColor(named: "65,71,77")?.withAlphaComponent(0.05).cgColor
         font = UIFont(name: "AppleSDGothicNeo-Regular", size: 16)
         
         if let ph = placeholder?.description {
             attributedPlaceholder = NSAttributedString(string: ph, attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray.withAlphaComponent(0.4) as Any])
         }
         
-        if #available(iOS 13.0, *) {
-            ivSearch.image = UIImage(systemName: "magnifyingglass")
-            btnClose.setImage(UIImage(systemName: "xmark"), for: .normal)
-            
-        } else {
-            // Fallback on earlier versions
-        }
-
-        ivSearch.tintColor = UIColor.black
-        btnClose.tintColor = UIColor.black
-        
-        addSubview(btnClose)
-        addSubview(ivSearch)
-        
-        ivSearch.snp.makeConstraints{ (make) in
-            make.leading.equalToSuperview().offset(8)
-            make.centerY.equalToSuperview()
-        }
-        btnClose.snp.makeConstraints{ (make) in
-            make.width.height.equalTo(14)
-            make.trailing.equalToSuperview().offset(-14)
-            make.centerY.equalToSuperview()
-        }
-        
-        btnClose.addTarget(self, action: #selector(OnClickClose), for: .touchUpInside)
-        
     }
     
-    @objc func OnClickClose() {
-        text = ""
+}
+
+extension TextField_General: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.layer.borderColor = UIColor(named: "65,71,77")?.cgColor
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        self.layer.borderColor = UIColor(named: "65,71,77")?.withAlphaComponent(0.05).cgColor
+
+        return true
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if let text = textField.text{
+            searchDelegate?.textFieldChange(text: text)
+        }
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // backspace 허용
+        if let char = string.cString(using: String.Encoding.utf8) {
+            let isBackSpace = strcmp(char, "\\b")
+            if isBackSpace == -92 {
+                return true
+            }
+        }
+
+        guard let text = textField.text else { return false }
+        if text.count >= 13 {
+            return false
+        }
+
+        return true
     }
 }

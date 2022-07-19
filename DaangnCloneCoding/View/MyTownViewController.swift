@@ -36,6 +36,7 @@ class MyTownViewController: UIViewController, PopupButtonDelegate, TextSearchDel
         tableView.reloadData()
     }
 
+    @IBOutlet weak var btnMytown: Button_General!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var noDataView: UIView!
     @IBOutlet var outView: UIView!
@@ -54,6 +55,7 @@ class MyTownViewController: UIViewController, PopupButtonDelegate, TextSearchDel
     // MARK: - General function
     func setupView() {
         textField.searchDelegate = self
+        btnMytown.btnMainColor = UIColor(named: "MainColor") 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none

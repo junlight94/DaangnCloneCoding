@@ -90,6 +90,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hGS-Fy-era"/>
+                    <connections>
+                        <outlet property="btnOk" destination="xUm-HL-nOz" id="cMs-c1-qYW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03Z-ke-e4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,6 +211,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnMytown" destination="GMi-9E-UpN" id="EDX-Fb-0RJ"/>
                         <outlet property="noDataView" destination="Qe3-07-rgi" id="2wV-RF-Vze"/>
                         <outlet property="outView" destination="AdD-nT-ALY" id="Uj4-A4-X4h"/>
                         <outlet property="tableView" destination="b8e-HP-nSB" id="9XL-45-1iV"/>
@@ -274,18 +278,24 @@
                                     <constraint firstAttribute="width" secondItem="0JW-zx-Gkx" secondAttribute="height" multiplier="1:1" id="LaJ-dh-dAv"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISm-VD-GXG">
-                                <rect key="frame" x="20" y="197" width="335" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="휴대폰 번호(-없이 숫자만 입력)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISm-VD-GXG" customClass="TextField_General" customModule="DaangnCloneCoding" customModuleProvider="target">
+                                <rect key="frame" x="20" y="197" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="f7J-Bu-lUl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8h-TF-lgq" customClass="Button_General" customModule="DaangnCloneCoding" customModuleProvider="target">
-                                <rect key="frame" x="20" y="251" width="335" height="50"/>
+                                <rect key="frame" x="20" y="261" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="VD9-V5-0bq"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="인증문자 받기"/>
+                                <connections>
+                                    <action selector="certButtonPressed:" destination="8Ec-JB-x7g" eventType="touchUpInside" id="Ei4-Vv-IhE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UBd-9j-pNJ"/>
@@ -310,6 +320,7 @@
                     </view>
                     <connections>
                         <outlet property="certButton" destination="q8h-TF-lgq" id="WWB-1Q-3dX"/>
+                        <outlet property="textField" destination="ISm-VD-GXG" id="6WU-gy-h2V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jy-0o-mkV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -8,9 +8,11 @@
 import UIKit
 
 class PlaceIntroViewController: UIViewController {
-
+    @IBOutlet weak var btnOk: Button_General!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnOk.btnMainColor = UIColor(named: "MainColor")
         self.navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
     }

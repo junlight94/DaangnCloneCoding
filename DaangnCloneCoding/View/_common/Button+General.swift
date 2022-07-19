@@ -9,6 +9,8 @@ import UIKit
 
 class Button_General: UIButton {
     
+    var btnMainColor: UIColor?
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
@@ -24,16 +26,16 @@ class Button_General: UIButton {
     override var isHighlighted: Bool {
         didSet {
             if isHighlighted {
-                self.backgroundColor = UIColor(named: "MainColor")?.withAlphaComponent(0.9)
+                self.backgroundColor = btnMainColor?.withAlphaComponent(0.9)
             } else {
-                self.backgroundColor = UIColor(named: "MainColor")
+                self.backgroundColor = btnMainColor
             }
         }
     }
     override var isEnabled: Bool {
         didSet {
             if isEnabled {
-                self.backgroundColor = UIColor(named: "MainColor")
+                self.backgroundColor = btnMainColor
             } else {
                 self.backgroundColor = UIColor(named: "227,223,227")
             }

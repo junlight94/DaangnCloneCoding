@@ -12,6 +12,8 @@
 		08887F2A2883F49700F87400 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08887F292883F49700F87400 /* JoinViewController.swift */; };
 		08887F2D2883FD3200F87400 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08887F2C2883FD3200F87400 /* DataModel.swift */; };
 		08887F2F2884375E00F87400 /* TextField+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08887F2E2884375E00F87400 /* TextField+Search.swift */; };
+		08A2DADF2886E3B00043CE01 /* TextField+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2DADE2886E3B00043CE01 /* TextField+General.swift */; };
+		08A2DAE12886E6440043CE01 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2DAE02886E6440043CE01 /* String+Extension.swift */; };
 		9337DF41287DA2CC0056B388 /* Button+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337DF40287DA2CC0056B388 /* Button+General.swift */; };
 		936291BB287DBB170019E181 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936291BA287DBB170019E181 /* MyTownViewController.swift */; };
 		938D5FAA2871CDB4004FC877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D5FA92871CDB4004FC877 /* AppDelegate.swift */; };
@@ -33,6 +35,8 @@
 		08887F292883F49700F87400 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		08887F2C2883FD3200F87400 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		08887F2E2884375E00F87400 /* TextField+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Search.swift"; sourceTree = "<group>"; };
+		08A2DADE2886E3B00043CE01 /* TextField+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+General.swift"; sourceTree = "<group>"; };
+		08A2DAE02886E6440043CE01 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		1D535CDED6264599E3DCBCB9 /* Pods-DaangnCloneCoding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnCloneCoding.debug.xcconfig"; path = "Target Support Files/Pods-DaangnCloneCoding/Pods-DaangnCloneCoding.debug.xcconfig"; sourceTree = "<group>"; };
 		5695783D8B7FE016BC2B55F9 /* Pods-DaangnCloneCoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnCloneCoding.release.xcconfig"; path = "Target Support Files/Pods-DaangnCloneCoding/Pods-DaangnCloneCoding.release.xcconfig"; sourceTree = "<group>"; };
 		9337DF40287DA2CC0056B388 /* Button+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+General.swift"; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				93A7A26B2880403F00F6F162 /* Delegate.swift */,
+				08A2DAE02886E6440043CE01 /* String+Extension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -144,8 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				9337DF40287DA2CC0056B388 /* Button+General.swift */,
-				08887F242883E53600F87400 /* PopupViewController.swift */,
 				08887F2E2884375E00F87400 /* TextField+Search.swift */,
+				08A2DADE2886E3B00043CE01 /* TextField+General.swift */,
+				08887F242883E53600F87400 /* PopupViewController.swift */,
 				08887F252883E53600F87400 /* PopupViewController.xib */,
 			);
 			path = _common;
@@ -271,10 +277,12 @@
 				08887F2D2883FD3200F87400 /* DataModel.swift in Sources */,
 				938D5FAE2871CDB4004FC877 /* ViewController.swift in Sources */,
 				08887F262883E53600F87400 /* PopupViewController.swift in Sources */,
+				08A2DAE12886E6440043CE01 /* String+Extension.swift in Sources */,
 				938D5FAA2871CDB4004FC877 /* AppDelegate.swift in Sources */,
 				93A7A26928803C1000F6F162 /* MyTownTableViewCell.swift in Sources */,
 				93C4F228287DB88D00E0725A /* PlaceIntroViewController.swift in Sources */,
 				08887F2F2884375E00F87400 /* TextField+Search.swift in Sources */,
+				08A2DADF2886E3B00043CE01 /* TextField+General.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

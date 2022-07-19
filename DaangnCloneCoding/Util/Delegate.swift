@@ -7,7 +7,10 @@
 
 import UIKit
 
-
+// TextField 글자 확인을 위한 딜리게이트
+protocol TextSearchDelegate {
+    func textFieldChange(text: String)
+}
 
 // 팝업 delegate
 protocol PopupButtonDelegate: AnyObject {

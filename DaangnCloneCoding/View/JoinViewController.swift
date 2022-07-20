@@ -8,16 +8,30 @@
 import UIKit
 
 class JoinViewController: UIViewController, TextSearchDelegate {
-    func textFieldChange(text: String) {
-        textField.text = text.phoneNumSpace()
-        if text.count == 13 {
-            certButton.isEnabled = true
+    func textFieldChange(textFieldId:Int, text: String) {
+        if textFieldId == 0 {
+            textField.text = text.phoneNumSpace()
+            if text.count == 13 {
+                certButton.isEnabled = true
+            } else {
+                certButton.isEnabled = false
+            }
         } else {
-            certButton.isEnabled = false
+            if agreeTextField.text == "941117" {
+                agreeButton.isEnabled = true
+            } else {
+                agreeButton.isEnabled = false
+            }
         }
     }
+    
+    
+    @IBOutlet weak var agreeTextField: TextField_General!
     @IBOutlet weak var textField: TextField_General!
     @IBOutlet weak var certButton: Button_General!
+    
+    @IBOutlet weak var agreeView: UIView!
+    @IBOutlet weak var agreeButton: Button_General!
     
     var limit = 300
     var timerText = ""
@@ -29,9 +43,21 @@ class JoinViewController: UIViewController, TextSearchDelegate {
     
     func setupView() {
         certButton.isEnabled = false
+        agreeButton.isEnabled = false
+        
         textField.searchDelegate = self
+        agreeTextField.searchDelegate = self
+        
+        textField.textFieldId = 0
+        agreeTextField.textFieldId = 1
+        
         textField.keyboardType = .numberPad
+        agreeTextField.keyboardType = .numberPad
+        
         certButton.btnMainColor = UIColor(named: "65,71,77")
+        agreeButton.btnMainColor = UIColor(named: "MainColor")
+        
+        agreeView.isHidden = true
     }
     
     @objc func setTime() {
@@ -57,10 +83,15 @@ class JoinViewController: UIViewController, TextSearchDelegate {
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func certButtonPressed(_ sender: Any) {
+        agreeView.isHidden = false
         limit = 300
         setTime()
     }
     
+    @IBAction func btnAgreePressed(_ sender: Any) {
+        self.appDelegate.switchMain()
+    }
     
 }

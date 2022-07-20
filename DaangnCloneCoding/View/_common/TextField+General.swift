@@ -16,6 +16,8 @@ class TextField_General: UITextField {
     let btnClose = UIButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
     let padding = UIEdgeInsets(top: 0, left: 32, bottom: 0, right: 32)
     
+    var textFieldId: Int?
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
@@ -77,7 +79,7 @@ extension TextField_General: UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if let text = textField.text{
-            searchDelegate?.textFieldChange(text: text)
+            searchDelegate?.textFieldChange(textFieldId: textFieldId ?? 0, text: text)
         }
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

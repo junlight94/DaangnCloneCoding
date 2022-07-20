@@ -21,7 +21,7 @@ class MyTownViewController: UIViewController, PopupButtonDelegate, TextSearchDel
         }
     }
     
-    func textFieldChange(text: String) {
+    func textFieldChange(textFieldId: Int, text: String) {
         if text.count > 0 {
             print(myTownData.filter({$0.contains(text)}))
             viewData = myTownData.filter({$0.contains(text)})

@@ -44,7 +44,7 @@ class TextField_Search: UITextField, UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if let text = textField.text{
-            searchDelegate?.textFieldChange(text: text)
+            searchDelegate?.textFieldChange(textFieldId: 0, text: text)
         }
     }
     

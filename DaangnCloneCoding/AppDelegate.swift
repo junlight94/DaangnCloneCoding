@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: - General Function
     func switchMain() {
         print("here")
-        let vc = SplashViewController(nibName: "Main", bundle: nil)
+        let vc = RootTabViewController(nibName: "RootTabViewController", bundle: nil)
         
         rootNavigationController = UINavigationController(rootViewController: vc)
         rootNavigationController?.setNavigationBarHidden(true, animated: false)

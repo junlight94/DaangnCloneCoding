@@ -244,7 +244,6 @@
                                         <state key="normal" image="arrow.backward" catalog="system"/>
                                         <connections>
                                             <action selector="backButtonPressed:" destination="8Ec-JB-x7g" eventType="touchUpInside" id="4Pm-OY-Dju"/>
-                                            <action selector="backPressed:" destination="Nst-ci-J3A" eventType="touchUpInside" id="jUG-rB-hnV"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인/가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hp-ro-n1r">
@@ -297,6 +296,49 @@
                                     <action selector="certButtonPressed:" destination="8Ec-JB-x7g" eventType="touchUpInside" id="Ei4-Vv-IhE"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Vc-Ip-ghM">
+                                <rect key="frame" x="0.0" y="341" width="375" height="129"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="인증번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dqe-YB-Eph" customClass="TextField_General" customModule="DaangnCloneCoding" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="335" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Cd3-y4-R4Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efp-v9-Mag" customClass="Button_General" customModule="DaangnCloneCoding" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="77" width="339" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="RMY-Dg-WPY"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="동의하고 시작하기"/>
+                                        <connections>
+                                            <action selector="btnAgreePressed:" destination="8Ec-JB-x7g" eventType="touchUpInside" id="6uN-v0-xbz"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤경우에도 타인에게 공유하지 마세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujn-cD-jzJ">
+                                        <rect key="frame" x="20" y="46" width="335" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="227,223,227"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Dqe-YB-Eph" firstAttribute="top" secondItem="5Vc-Ip-ghM" secondAttribute="top" id="4Pl-TA-lvf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dqe-YB-Eph" secondAttribute="trailing" constant="20" id="5Wq-3X-83f"/>
+                                    <constraint firstItem="ujn-cD-jzJ" firstAttribute="leading" secondItem="5Vc-Ip-ghM" secondAttribute="leading" constant="20" id="Hx1-te-xHq"/>
+                                    <constraint firstItem="Efp-v9-Mag" firstAttribute="top" secondItem="ujn-cD-jzJ" secondAttribute="bottom" constant="16" id="Pc3-Al-Cu4"/>
+                                    <constraint firstItem="Dqe-YB-Eph" firstAttribute="leading" secondItem="5Vc-Ip-ghM" secondAttribute="leading" constant="20" id="WVN-G8-reW"/>
+                                    <constraint firstAttribute="trailing" secondItem="ujn-cD-jzJ" secondAttribute="trailing" constant="20" id="cHc-CC-2T2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Efp-v9-Mag" secondAttribute="bottom" id="qBz-zV-syn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Efp-v9-Mag" secondAttribute="trailing" constant="18" id="sTG-ER-qgD"/>
+                                    <constraint firstItem="ujn-cD-jzJ" firstAttribute="top" secondItem="Dqe-YB-Eph" secondAttribute="bottom" constant="2" id="u3F-ne-Vzk"/>
+                                    <constraint firstItem="Efp-v9-Mag" firstAttribute="leading" secondItem="5Vc-Ip-ghM" secondAttribute="leading" constant="18" id="upO-Na-unb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UBd-9j-pNJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -305,13 +347,16 @@
                             <constraint firstItem="w2Z-I2-OKF" firstAttribute="top" secondItem="sJB-BW-Daq" secondAttribute="bottom" constant="20" id="DNM-5u-tjc"/>
                             <constraint firstItem="sJB-BW-Daq" firstAttribute="top" secondItem="UBd-9j-pNJ" secondAttribute="top" id="EpO-wW-8jM"/>
                             <constraint firstItem="ISm-VD-GXG" firstAttribute="leading" secondItem="UBd-9j-pNJ" secondAttribute="leading" constant="20" id="Ijn-Kw-cEI"/>
+                            <constraint firstItem="UBd-9j-pNJ" firstAttribute="trailing" secondItem="5Vc-Ip-ghM" secondAttribute="trailing" id="KED-e0-i2u"/>
                             <constraint firstItem="UBd-9j-pNJ" firstAttribute="trailing" secondItem="q8h-TF-lgq" secondAttribute="trailing" constant="20" id="Mpf-xc-bxp"/>
                             <constraint firstItem="w2Z-I2-OKF" firstAttribute="leading" secondItem="0JW-zx-Gkx" secondAttribute="trailing" constant="20" id="ShH-Kt-fh1"/>
                             <constraint firstAttribute="trailing" secondItem="w2Z-I2-OKF" secondAttribute="trailing" constant="20" id="YnF-ET-Wsi"/>
+                            <constraint firstItem="5Vc-Ip-ghM" firstAttribute="leading" secondItem="UBd-9j-pNJ" secondAttribute="leading" id="eLN-lc-4Bd"/>
                             <constraint firstItem="q8h-TF-lgq" firstAttribute="top" secondItem="ISm-VD-GXG" secondAttribute="bottom" constant="20" id="f8c-ur-LaT"/>
                             <constraint firstItem="UBd-9j-pNJ" firstAttribute="trailing" secondItem="ISm-VD-GXG" secondAttribute="trailing" constant="20" id="i2H-bf-cqO"/>
                             <constraint firstItem="0JW-zx-Gkx" firstAttribute="top" secondItem="w2Z-I2-OKF" secondAttribute="top" id="iMA-Jf-RJG"/>
                             <constraint firstItem="ISm-VD-GXG" firstAttribute="top" secondItem="w2Z-I2-OKF" secondAttribute="bottom" constant="20" id="lC6-ue-Coe"/>
+                            <constraint firstItem="5Vc-Ip-ghM" firstAttribute="top" secondItem="q8h-TF-lgq" secondAttribute="bottom" constant="30" id="oIh-Aj-yY0"/>
                             <constraint firstItem="q8h-TF-lgq" firstAttribute="leading" secondItem="UBd-9j-pNJ" secondAttribute="leading" constant="20" id="u75-zY-xHd"/>
                             <constraint firstItem="UBd-9j-pNJ" firstAttribute="trailing" secondItem="sJB-BW-Daq" secondAttribute="trailing" id="uD5-jr-iEA"/>
                             <constraint firstItem="sJB-BW-Daq" firstAttribute="leading" secondItem="gNw-gc-V75" secondAttribute="leading" id="ulC-kH-Nip"/>
@@ -319,6 +364,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="agreeButton" destination="Efp-v9-Mag" id="I3m-wn-vRG"/>
+                        <outlet property="agreeTextField" destination="Dqe-YB-Eph" id="gIR-Kh-VFO"/>
+                        <outlet property="agreeView" destination="5Vc-Ip-ghM" id="zv3-e9-gh2"/>
                         <outlet property="certButton" destination="q8h-TF-lgq" id="WWB-1Q-3dX"/>
                         <outlet property="textField" destination="ISm-VD-GXG" id="6WU-gy-h2V"/>
                     </connections>
@@ -348,6 +396,9 @@
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="lock" catalog="system" width="128" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <namedColor name="227,223,227">
+            <color red="0.85098039215686272" green="0.87450980392156863" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="65,71,77">
             <color red="0.25490196078431371" green="0.27843137254901962" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -80,11 +80,39 @@ class JoinViewController: UIViewController, TextSearchDelegate {
         }
     }
     
+    func showToast() {
+        let toastView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
+        toastView.backgroundColor = UIColor(named: "65,71,77")
+        let toastLabel = UILabel()
+        toastLabel.textAlignment = .center
+        toastLabel.text = "인증번호가 문자로 전송됐습니다.(최대 20초 소요)"
+        toastLabel.textColor = UIColor.white
+        toastLabel.alpha = 1.0
+        
+        toastView.addSubview(toastLabel)
+        
+        toastLabel.snp.makeConstraints{ (make) in
+            make.bottom.equalToSuperview().offset(-20)
+            make.leading.trailing.equalToSuperview().offset(10)
+        }
+        
+        self.view.addSubview(toastView)
+        
+        UIView.animate(withDuration: 4.0, delay: 0, options: .curveEaseIn) {
+            toastView.alpha = 0
+        } completion: { Bool in
+            toastView.removeFromSuperview()
+        }
+
+        
+    }
+    
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func certButtonPressed(_ sender: Any) {
+        showToast()
         agreeView.isHidden = false
         limit = 300
         setTime()

@@ -25,13 +25,13 @@ class JoinViewController: UIViewController, TextSearchDelegate {
         }
     }
     
-    
     @IBOutlet weak var agreeTextField: TextField_General!
     @IBOutlet weak var textField: TextField_General!
     @IBOutlet weak var certButton: Button_General!
     
     @IBOutlet weak var agreeView: UIView!
     @IBOutlet weak var agreeButton: Button_General!
+    
     
     var limit = 300
     var timerText = ""
@@ -76,6 +76,7 @@ class JoinViewController: UIViewController, TextSearchDelegate {
             timerText = String(minute) + "분" + String(second) + "초"
         }
         if limit > -1 {
+            NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(setTime), object: nil)
             perform(#selector(setTime), with: nil, afterDelay: 1.0)
         }
     }
@@ -119,6 +120,7 @@ class JoinViewController: UIViewController, TextSearchDelegate {
     }
     
     @IBAction func btnAgreePressed(_ sender: Any) {
+        DataManager.shared.isPermissionJoin = true
         self.appDelegate.switchMain()
     }
     

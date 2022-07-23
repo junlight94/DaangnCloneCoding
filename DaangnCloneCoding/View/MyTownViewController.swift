@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MyTownViewController: UIViewController, PopupButtonDelegate, TextSearchDelegate {
     func buttonPressed(popupId: Int?, isOk: Bool) {
@@ -15,6 +16,12 @@ class MyTownViewController: UIViewController, PopupButtonDelegate, TextSearchDel
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = mainStoryboard.instantiateViewController(withIdentifier: "joinView")
                 self.navigationController?.pushViewController(vc, animated: true)
+            }
+            let realmData = MyTownDB()
+            realmData.id = MyTownDB().incrementID()
+            realmData.myTownArr.append(myTown)
+            try? realm.write {
+                realm.add(realmData)
             }
         } else {
             self.dismiss(animated: false)
@@ -46,6 +53,9 @@ class MyTownViewController: UIViewController, PopupButtonDelegate, TextSearchDel
     var viewData = [String]()
     let myTownData = ["방화동", "신림동", "중산동", "방배동", "양재동"]
     
+    var myTown = ""
+    
+    let realm = try! Realm(configuration: DataManager.shared.realmConfiguration())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +87,7 @@ class MyTownViewController: UIViewController, PopupButtonDelegate, TextSearchDel
     // MARK: - Selector function
     @objc func btnOnClick(_ sender: UIButton) {
         print(viewData[sender.tag])
+        myTown = viewData[sender.tag]
         let vc = PopupViewController(nibName: "PopupViewController", bundle: nil)
         vc.modalPresentationStyle = .overCurrentContext
         vc.isOneButton = false

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "42EADFA6B187948BFD99C9BCEC139EFB"
-               BuildableName = "libPods-DaangnCloneCoding.a"
+               BuildableName = "Pods_DaangnCloneCoding.framework"
                BlueprintName = "Pods-DaangnCloneCoding"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

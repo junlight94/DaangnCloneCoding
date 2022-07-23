@@ -9,8 +9,6 @@ import UIKit
 
 class SplashViewController: UIViewController {
     
-    var check = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +26,7 @@ class SplashViewController: UIViewController {
     }
     // MARK: - General function
     func checkJoin() {
-        if check == true {
+        if DataManager.shared.isPermissionJoin == true {
             self.appDelegate.switchMain()
         } else {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

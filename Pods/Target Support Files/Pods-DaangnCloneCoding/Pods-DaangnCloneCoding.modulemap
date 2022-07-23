@@ -1,4 +1,4 @@
-module Pods_DaangnCloneCoding {
+framework module Pods_DaangnCloneCoding {
   umbrella header "Pods-DaangnCloneCoding-umbrella.h"
 
   export *

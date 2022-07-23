@@ -2,7 +2,8 @@
 # platform :ios, '9.0'
 
 target 'DaangnCloneCoding' do
-
-   pod 'SnapKit', '~> 5.6.0'
-
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'SnapKit', '~> 5.6.0'
+  pod 'RealmSwift'
 end

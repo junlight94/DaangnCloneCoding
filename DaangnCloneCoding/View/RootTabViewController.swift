@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RootTabViewController: UIViewController {
-
+    
+    let realm = try! Realm(configuration: DataManager.shared.realmConfiguration())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(realm.objects(MyTownDB.self))
     }
 
 

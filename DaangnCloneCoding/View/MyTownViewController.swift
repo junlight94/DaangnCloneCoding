@@ -20,6 +20,7 @@ class MyTownViewController: UIViewController, PopupButtonDelegate, TextSearchDel
             let realmData = MyTownDB()
             realmData.id = MyTownDB().incrementID()
             realmData.myTownArr.append(myTown)
+            realmData.mainTown = myTown
             try? realm.write {
                 realm.add(realmData)
             }

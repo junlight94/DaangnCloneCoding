@@ -10,6 +10,7 @@ import RealmSwift
 
 class MyTownDB: Object {
     @objc dynamic var id = 0
+    @objc dynamic var mainTown = ""
     var myTown: List<String> = List<String>()
     var myTownArr: [String] {
         get {

@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		08435BAD288BB9050055C8AF /* MyTownDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08435BAC288BB9050055C8AF /* MyTownDB.swift */; };
+		08435BB52892CE6B0055C8AF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08435BB32892CE6B0055C8AF /* MainViewController.swift */; };
+		08435BB62892CE6B0055C8AF /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08435BB42892CE6B0055C8AF /* MainViewController.xib */; };
+		08435BB92892CE7C0055C8AF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08435BB72892CE7C0055C8AF /* ChatViewController.swift */; };
+		08435BBA2892CE7C0055C8AF /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08435BB82892CE7C0055C8AF /* ChatViewController.xib */; };
+		08435BBD2892CE940055C8AF /* AroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08435BBB2892CE940055C8AF /* AroundViewController.swift */; };
+		08435BBE2892CE940055C8AF /* AroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08435BBC2892CE940055C8AF /* AroundViewController.xib */; };
+		08435BC12892CEA10055C8AF /* LifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08435BBF2892CEA10055C8AF /* LifeViewController.swift */; };
+		08435BC22892CEA10055C8AF /* LifeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08435BC02892CEA10055C8AF /* LifeViewController.xib */; };
+		08435BC52892CEAD0055C8AF /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08435BC32892CEAD0055C8AF /* MyPageViewController.swift */; };
+		08435BC62892CEAD0055C8AF /* MyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08435BC42892CEAD0055C8AF /* MyPageViewController.xib */; };
 		08887F262883E53600F87400 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08887F242883E53600F87400 /* PopupViewController.swift */; };
 		08887F272883E53600F87400 /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08887F252883E53600F87400 /* PopupViewController.xib */; };
 		08887F2A2883F49700F87400 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08887F292883F49700F87400 /* JoinViewController.swift */; };
@@ -34,6 +44,16 @@
 
 /* Begin PBXFileReference section */
 		08435BAC288BB9050055C8AF /* MyTownDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownDB.swift; sourceTree = "<group>"; };
+		08435BB32892CE6B0055C8AF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		08435BB42892CE6B0055C8AF /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		08435BB72892CE7C0055C8AF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		08435BB82892CE7C0055C8AF /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		08435BBB2892CE940055C8AF /* AroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundViewController.swift; sourceTree = "<group>"; };
+		08435BBC2892CE940055C8AF /* AroundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AroundViewController.xib; sourceTree = "<group>"; };
+		08435BBF2892CEA10055C8AF /* LifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeViewController.swift; sourceTree = "<group>"; };
+		08435BC02892CEA10055C8AF /* LifeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LifeViewController.xib; sourceTree = "<group>"; };
+		08435BC32892CEAD0055C8AF /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		08435BC42892CEAD0055C8AF /* MyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageViewController.xib; sourceTree = "<group>"; };
 		08887F242883E53600F87400 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		08887F252883E53600F87400 /* PopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupViewController.xib; sourceTree = "<group>"; };
 		08887F292883F49700F87400 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +94,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08435BAE2892CDD30055C8AF /* 홈-메인 */ = {
+			isa = PBXGroup;
+			children = (
+				08435BB32892CE6B0055C8AF /* MainViewController.swift */,
+				08435BB42892CE6B0055C8AF /* MainViewController.xib */,
+			);
+			name = "홈-메인";
+			sourceTree = "<group>";
+		};
+		08435BAF2892CDFE0055C8AF /* 홈-동네생활 */ = {
+			isa = PBXGroup;
+			children = (
+				08435BBF2892CEA10055C8AF /* LifeViewController.swift */,
+				08435BC02892CEA10055C8AF /* LifeViewController.xib */,
+			);
+			name = "홈-동네생활";
+			sourceTree = "<group>";
+		};
+		08435BB02892CE0C0055C8AF /* 홈-내 근처 */ = {
+			isa = PBXGroup;
+			children = (
+				08435BBB2892CE940055C8AF /* AroundViewController.swift */,
+				08435BBC2892CE940055C8AF /* AroundViewController.xib */,
+			);
+			name = "홈-내 근처";
+			sourceTree = "<group>";
+		};
+		08435BB12892CE150055C8AF /* 홈-채팅 */ = {
+			isa = PBXGroup;
+			children = (
+				08435BB72892CE7C0055C8AF /* ChatViewController.swift */,
+				08435BB82892CE7C0055C8AF /* ChatViewController.xib */,
+			);
+			name = "홈-채팅";
+			sourceTree = "<group>";
+		};
+		08435BB22892CE1E0055C8AF /* 홈-나의당근 */ = {
+			isa = PBXGroup;
+			children = (
+				08435BC32892CEAD0055C8AF /* MyPageViewController.swift */,
+				08435BC42892CEAD0055C8AF /* MyPageViewController.xib */,
+			);
+			name = "홈-나의당근";
+			sourceTree = "<group>";
+		};
 		08887F2B2883FD2500F87400 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +223,11 @@
 				93B5C95B287D9C2D009F5EA4 /* _common */,
 				93B5C95C287D9C48009F5EA4 /* 시작-인트로 */,
 				08CD644528884C8000A150B7 /* 홈 */,
+				08435BAE2892CDD30055C8AF /* 홈-메인 */,
+				08435BB12892CE150055C8AF /* 홈-채팅 */,
+				08435BB02892CE0C0055C8AF /* 홈-내 근처 */,
+				08435BAF2892CDFE0055C8AF /* 홈-동네생활 */,
+				08435BB22892CE1E0055C8AF /* 홈-나의당근 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,11 +318,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				938D5FB62871CDB6004FC877 /* LaunchScreen.storyboard in Resources */,
+				08435BBE2892CE940055C8AF /* AroundViewController.xib in Resources */,
 				93A7A26A28803C1000F6F162 /* MyTownTableViewCell.xib in Resources */,
 				08887F272883E53600F87400 /* PopupViewController.xib in Resources */,
 				938D5FB32871CDB6004FC877 /* Assets.xcassets in Resources */,
 				08CD644D28884CF600A150B7 /* RootTabViewController.xib in Resources */,
+				08435BB62892CE6B0055C8AF /* MainViewController.xib in Resources */,
+				08435BBA2892CE7C0055C8AF /* ChatViewController.xib in Resources */,
+				08435BC22892CEA10055C8AF /* LifeViewController.xib in Resources */,
 				938D5FB12871CDB4004FC877 /* Main.storyboard in Resources */,
+				08435BC62892CEAD0055C8AF /* MyPageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,14 +387,19 @@
 				936291BB287DBB170019E181 /* MyTownViewController.swift in Sources */,
 				93A7A26C2880403F00F6F162 /* Delegate.swift in Sources */,
 				938D5FAE2871CDB4004FC877 /* ViewController.swift in Sources */,
+				08435BB52892CE6B0055C8AF /* MainViewController.swift in Sources */,
+				08435BBD2892CE940055C8AF /* AroundViewController.swift in Sources */,
 				08887F262883E53600F87400 /* PopupViewController.swift in Sources */,
+				08435BC12892CEA10055C8AF /* LifeViewController.swift in Sources */,
 				08A2DAE12886E6440043CE01 /* String+Extension.swift in Sources */,
 				08435BAD288BB9050055C8AF /* MyTownDB.swift in Sources */,
 				08CD644C28884CF600A150B7 /* RootTabViewController.swift in Sources */,
 				938D5FAA2871CDB4004FC877 /* AppDelegate.swift in Sources */,
 				93A7A26928803C1000F6F162 /* MyTownTableViewCell.swift in Sources */,
+				08435BC52892CEAD0055C8AF /* MyPageViewController.swift in Sources */,
 				93C4F228287DB88D00E0725A /* PlaceIntroViewController.swift in Sources */,
 				08887F2F2884375E00F87400 /* TextField+Search.swift in Sources */,
+				08435BB92892CE7C0055C8AF /* ChatViewController.swift in Sources */,
 				08A2DADF2886E3B00043CE01 /* TextField+General.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
